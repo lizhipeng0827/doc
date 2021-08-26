@@ -44,6 +44,34 @@ public class HelloWorldApplication {
 }
 ```
 
+Hprose远程调用支持
+
+`@HmmyRemote`
+
+| 参数 | 说明 |
+| :--- | :--- |
+| value | 服务名称 |
+
+```javascript
+@HmmyRemote("notify-service")
+public class AliMessageRpc{
+
+    /**
+     * 发送单条短信
+     * @param PhoneNumbers
+     * @param TemplateCode
+     * @param TemplateParam
+     * @param menberId 
+     * @return com.hmmy.common.resp.CommonResp<java.lang.String> 
+     */
+    public CommonResp<String> sendAliSms(String PhoneNumbers, String TemplateCode, String TemplateParam, Integer menberId) throws Exception {
+        Object[] objs = {PhoneNumbers, TemplateCode, TemplateParam, menberId};
+        return HproseUtils.exeHproseGateWayFunc("notifyService/AliMessageRpc/sendAliSms", objs, new TypeReference<CommonResp<String>>() {
+        });
+    }
+}
+```
+
 配置动态刷新
 
 `@RefreshScope`
