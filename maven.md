@@ -110,7 +110,7 @@
     <parent>
         <groupId>com</groupId>
         <artifactId>hmmy-cloud</artifactId>
-        <version>1.0.0</version>
+        <version>1.1.0</version>
         <relativePath/>
     </parent>
 
@@ -122,7 +122,7 @@
         <dependency>
             <groupId>com.hmmy</groupId>
             <artifactId>cloud-common</artifactId>
-            <version>1.0.0</version>
+            <version>RELEASE</version>
         </dependency>
 
         <!-- SpringCloud Alibaba Nacos -->
