@@ -61,7 +61,7 @@
     </dependency>
 ```
 
-* 编辑插件
+* 编译插件
 
 ```markup
 <build>
