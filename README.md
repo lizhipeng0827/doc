@@ -8,7 +8,7 @@ Spring Cloud Alibaba里面包含开发分布式应用微服务的必需组件，
 
 ## Spring Cloud Alibaba 包含组件
 
-![](https://pic4.zhimg.com/80/v2-46c0b9e0d41c441d222390c79a4cd53b_720w.jpg)
+![](https://pic4.zhimg.com/80/v2-46c0b9e0d41c441d222390c79a4cd53b\_720w.jpg)
 
 ## 当前已使用组件
 
@@ -20,13 +20,12 @@ Spring Cloud Alibaba里面包含开发分布式应用微服务的必需组件，
 
 ## 版本
 
-| 名称 | 版本 | 备注 |
-| :--- | :--- | :--- |
-| Spring Boot | `2.3.7.RELEASE` | - |
-| Spring Cloud | `Hoxton.SR9` | - |
-| Spring Cloud Alibaba | `2.2.5.RELEASE` | - |
-| Nacos | `2.0.1` | 注册中心、配置中心 |
-| Gateway | `2.2.6.RELEASE` | API网关 |
-| Sentinel | `2.2.5.RELEASE` | 流量控制、熔断降级、系统负载保护 |
-| OpenFeign | `2.2.6.RELEASE` | 服务调用 |
-
+| 名称                   | 版本              | 备注               |
+| -------------------- | --------------- | ---------------- |
+| Spring Boot          | `2.3.7.RELEASE` | -                |
+| Spring Cloud         | `Hoxton.SR9`    | -                |
+| Spring Cloud Alibaba | `2.2.5.RELEASE` | -                |
+| Nacos                | `2.0.1`         | 注册中心、配置中心        |
+| Gateway              | `2.2.6.RELEASE` | API网关            |
+| Sentinel             | `2.2.5.RELEASE` | 流量控制、熔断降级、系统负载保护 |
+| OpenFeign            | `2.2.6.RELEASE` | 服务调用             |

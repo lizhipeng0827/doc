@@ -23,7 +23,7 @@
 * com.hmmy.login.interceptors=/gardenService/\*\*
 {% endhint %}
 
-### Nacos配置步骤 <a id="nacos"></a>
+### Nacos配置步骤 <a href="nacos" id="nacos"></a>
 
 * 登录Nacos
 
@@ -35,9 +35,9 @@ Nacos配置中心
 * 密码：nacos
 {% endhint %}
 
-登录后打开配置列表，选择命名空间`test`\(配置管理上方\)，点击右上方“+”添加按钮，如下图所示
+登录后打开配置列表，选择命名空间`test`(配置管理上方)，点击右上方“+”添加按钮，如下图所示
 
-![&#x914D;&#x7F6E;&#x9875;&#x9762;](http://hmmy-mall-nursery-stock.oss-cn-beijing.aliyuncs.com/20210607093108.png)
+![配置页面](http://hmmy-mall-nursery-stock.oss-cn-beijing.aliyuncs.com/20210607093108.png)
 
 * 添加配置文件
 
@@ -50,7 +50,7 @@ Nacos配置中心
 4. `配置内容`：配置文件内容
 {% endhint %}
 
-![&#x65B0;&#x5EFA;&#x914D;&#x7F6E;](http://hmmy-mall-nursery-stock.oss-cn-beijing.aliyuncs.com/20210607092345.png)
+![新建配置](http://hmmy-mall-nursery-stock.oss-cn-beijing.aliyuncs.com/20210607092345.png)
 
 ## 项目启动配置文件
 
@@ -99,7 +99,7 @@ spring:
       config:
         file-extension: properties
         namespace: 7d3fec7d-3f04-46fa-b4d8-589ceef5645d
-        server-addr: 172.16.0.99:8848,172.16.0.100:8848,172.16.0.101:8848
+        server-addr: 172.16.0.106:8848,172.16.0.100:8848,172.16.0.101:8848
         shared-configs:
           - ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
         extension-configs:
@@ -108,10 +108,12 @@ spring:
             refresh: true
       discovery:
         namespace: 7d3fec7d-3f04-46fa-b4d8-589ceef5645d
-        server-addr: 172.16.0.99:8848,172.16.0.100:8848,172.16.0.101:8848
+        server-addr: 172.16.0.106:8848,172.16.0.100:8848,172.16.0.101:8848
 ```
 
-{% file src=".gitbook/assets/bootstrap.yml" caption="bootstrap.yml" %}
+{% file src=".gitbook/assets/bootstrap (1).yml" %}
+bootstrap.yml
+{% endfile %}
 
 ## 路由配置
 
@@ -119,7 +121,7 @@ spring:
 
 `http://xxx-service/xxx/xxx/xxx`
 
-### 前端API地址兼容 <a id="hprose"></a>
+### 前端API地址兼容 <a href="hprose" id="hprose"></a>
 
 {% hint style="danger" %}
 注意事项
@@ -129,9 +131,9 @@ spring:
 
 nacos 配置文件 ： `hmmy-routes`
 
-![hmmy-routes&#x914D;&#x7F6E;&#x6587;&#x4EF6;](http://hmmy-mall-nursery-stock.oss-cn-beijing.aliyuncs.com/20210617090730.png)
+![hmmy-routes配置文件](http://hmmy-mall-nursery-stock.oss-cn-beijing.aliyuncs.com/20210617090730.png)
 
-![&#x914D;&#x7F6E;&#x8BE6;&#x60C5;](https://hmmy-mall-nursery-stock.oss-cn-beijing.aliyuncs.com/20210617090859.png)
+![配置详情](https://hmmy-mall-nursery-stock.oss-cn-beijing.aliyuncs.com/20210617090859.png)
 
 {% hint style="danger" %}
 此配置应用于兼容hprose网关地址，如：/xxxService/xxxxRPC/xxxx，新网关地址：/xxx-service/xxxService/xxxxRPC/xxxx，此配置会根据xxxService转发到xxx-service处理。
@@ -155,7 +157,7 @@ predicates匹配路由，uri为目标服务
 ```
 {% endhint %}
 
-### easyui 页面转发 <a id="easyui-"></a>
+### easyui 页面转发 <a href="easyui" id="easyui"></a>
 
 {% hint style="danger" %}
 uri为原始地址，配置后完整地址为：`http://网关地址/authpage/config/xxx.html`
@@ -184,6 +186,4 @@ uri为原始地址，配置后完整地址为：`http://网关地址/authpage/co
     }
 ```
 {% endhint %}
-
-
 

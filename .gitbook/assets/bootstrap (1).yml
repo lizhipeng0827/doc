@@ -1,0 +1,48 @@
+server:
+  port: 23501
+spring:
+  profiles:
+    active: dev
+  application:
+    name: example-service
+
+#开发环境
+---
+spring:
+  profiles: dev
+  cloud:
+    nacos:
+      config:
+        file-extension: properties
+        namespace: c367eff6-4ecf-4d52-bdd1-5b519e58d9ed
+        server-addr: 192.168.2.233:8848
+        shared-configs:
+          - ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        extension-configs:
+          - data-id: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            group: DEFAULT_GROUP
+            refresh: true
+      discovery:
+        namespace: c367eff6-4ecf-4d52-bdd1-5b519e58d9ed
+        server-addr: 192.168.2.233:8848
+
+#正式环境
+---
+spring:
+  profiles: prod
+  cloud:
+    nacos:
+      config:
+        file-extension: properties
+        namespace: 7d3fec7d-3f04-46fa-b4d8-589ceef5645d
+        server-addr: 172.16.0.106:8848,172.16.0.100:8848,172.16.0.101:8848
+        shared-configs:
+          - ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+        extension-configs:
+          - data-id: ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
+            group: DEFAULT_GROUP
+            refresh: true
+      discovery:
+        namespace: 7d3fec7d-3f04-46fa-b4d8-589ceef5645d
+        server-addr: 172.16.0.106:8848,172.16.0.100:8848,172.16.0.101:8848
+
