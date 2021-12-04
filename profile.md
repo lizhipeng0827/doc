@@ -23,7 +23,7 @@
 * com.hmmy.login.interceptors=/gardenService/\*\*
 {% endhint %}
 
-### Nacos配置步骤 <a href="nacos" id="nacos"></a>
+### Nacos配置步骤 <a href="#nacos" id="nacos"></a>
 
 * 登录Nacos
 
@@ -99,7 +99,7 @@ spring:
       config:
         file-extension: properties
         namespace: 7d3fec7d-3f04-46fa-b4d8-589ceef5645d
-        server-addr: 172.16.0.106:8848,172.16.0.100:8848,172.16.0.101:8848
+        server-addr: 172.16.0.98:8848,172.16.0.99:8848,172.16.0.114:8848
         shared-configs:
           - ${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}
         extension-configs:
@@ -108,12 +108,8 @@ spring:
             refresh: true
       discovery:
         namespace: 7d3fec7d-3f04-46fa-b4d8-589ceef5645d
-        server-addr: 172.16.0.106:8848,172.16.0.100:8848,172.16.0.101:8848
+        server-addr: 172.16.0.98:8848,172.16.0.99:8848,172.16.0.114:8848
 ```
-
-{% file src=".gitbook/assets/bootstrap (1).yml" %}
-bootstrap.yml
-{% endfile %}
 
 ## 路由配置
 
@@ -121,7 +117,7 @@ bootstrap.yml
 
 `http://xxx-service/xxx/xxx/xxx`
 
-### 前端API地址兼容 <a href="hprose" id="hprose"></a>
+### 前端API地址兼容 <a href="#hprose" id="hprose"></a>
 
 {% hint style="danger" %}
 注意事项
@@ -157,7 +153,7 @@ predicates匹配路由，uri为目标服务
 ```
 {% endhint %}
 
-### easyui 页面转发 <a href="easyui" id="easyui"></a>
+### easyui 页面转发 <a href="#easyui" id="easyui"></a>
 
 {% hint style="danger" %}
 uri为原始地址，配置后完整地址为：`http://网关地址/authpage/config/xxx.html`
